@@ -1,6 +1,12 @@
 # WebdriverIO Automation Testing for Evershop
 
-This project contains **end-to-end automation tests** for [Evershop Demo](https://demo.evershop.io/) using **WebdriverIO** with **Mocha** and **Allure Reporter**.  
+This project contains **end-to-end automation tests** for the [Evershop Demo Website](https://demo.evershop.io/) built using **WebdriverIO**, **Mocha**, and **Allure Reporter**.  
+
+---
+
+🎬 **Demo Video**  
+Watch a short demo of the automation test execution here:  
+📎 [Click to View Demo Video on Google Drive]([https://drive.google.com/file/d/YOUR_VIDEO_ID/view?usp=sharing](https://drive.google.com/file/d/1DTsX46Cv0BILRAk-uZ7k-_iaiOnEgbHn/view?usp=drive_link))
 
 ##  What I Did
 - Implemented **Page Object Model (POM)** for maintainable automation.  
@@ -11,7 +17,7 @@ This project contains **end-to-end automation tests** for [Evershop Demo](https:
   - Empty fields  
   - Invalid email format
 - Automated **product Search**:
-  -Search a Product
+  - Search a Product
 - Automated **product selection**:
   - Open product page  
   - Select size and random color  
@@ -28,8 +34,13 @@ This project contains **end-to-end automation tests** for [Evershop Demo](https:
 ---
 
 ## 🚀 How to Run
-
-1. **Install dependencies**:
-
+**Install dependencies**
+- **REQUIRED COMMANDS** 
 ```bash
 npm install
+npm run wido  (To run all Tests)
+npx wdio run wdio.conf.ts --suite login  (Run a specific test suite addProduct,SearchProduct,login,checkout)
+-Allure Report:
+npx allure generate allure-results --clean -o allure-report
+npx allure open allure-report
+
