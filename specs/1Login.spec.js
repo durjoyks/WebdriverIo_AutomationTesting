@@ -1,4 +1,4 @@
-import LoginActions from '../test/LogIn/LoginActions.js';
+import LoginActions from '../test/Login/LoginActions.js';
 import assert from 'assert';
 
 describe('Evershop Login Flow', () => {
