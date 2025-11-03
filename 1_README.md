@@ -5,7 +5,7 @@ This project contains **end-to-end automation tests** for the [Evershop Demo Web
 ---
 
 🎬 **Demo Video**  
-Watch a short demo of the automation test execution here:  
+Watch a short Screen Record of the automation test execution here:  
 📎 [Click to View Demo Video on Google Drive](https://drive.google.com/file/d/1DTsX46Cv0BILRAk-uZ7k-_iaiOnEgbHn/view?usp=drive_link)
 
 ##  What I Did
