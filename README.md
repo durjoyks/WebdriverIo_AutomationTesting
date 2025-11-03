@@ -36,7 +36,6 @@ Watch a short Screen Record of the automation test execution here:
 ## 📂 Folder Significance
 - **test folder** → Contains all **Page Objects** and **Action classes** that handle locators and logic.  
 - **specs folder** → Contains **test files** that execute and verify different scenarios using those actions.
-- 
 
 ## 🚀 How to Run
 **Install dependencies**
