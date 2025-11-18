@@ -1,0 +1,22 @@
+{
+  "valid": {
+    "email": "durjoyks261@gmail.com",
+    "password": "durjoyks261"
+  },
+  "invalidEmail": {
+    "email": "wronguser@example.com",
+    "password": "validpassword123"
+  },
+  "wrongPassword": {
+    "email": "durjoyks261@gmail.com",
+    "password": "wrongpassword"
+  },
+  "empty": {
+    "email": "",
+    "password": ""
+  },
+  "invalidFormat": {
+    "email": "invalidemail",
+    "password": "somepassword"
+  }
+}

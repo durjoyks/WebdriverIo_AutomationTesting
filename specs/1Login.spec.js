@@ -1,5 +1,6 @@
 import LoginActions from '../test/LogIn/LoginActions.js';
 import assert from 'assert';
+import loginData from '../test/data/loginData.json' assert { type: 'json' };
 
 describe('Evershop Login Flow', () => {
 
@@ -8,22 +9,23 @@ describe('Evershop Login Flow', () => {
         await LoginActions.openLoginPage();
     });
 
+    
     it('Login with valid credentials', async () => {
-        await LoginActions.login('durjoyks261@gmail.com', 'durjoyks261');
+        await LoginActions.login(loginData.valid.email, loginData.valid.password);
         await browser.pause(2000); // wait for redirect 
         const currentUrl = await browser.getUrl();
         assert.strictEqual(currentUrl, 'https://demo.evershop.io/', 'User should be redirected to homepage');
     });
 
     it('Login with invalid email', async () => {
-        await LoginActions.login('wronguser@example.com', 'validpassword123');
+        await LoginActions.login(loginData.invalidEmail.email, loginData.invalidEmail.password);
         await browser.pause(2000);
         const currentUrl = await browser.getUrl();
         assert.ok(currentUrl.includes('/account/login'), 'User should remain on login page');
     });
 
     it('Login with wrong password', async () => {
-        await LoginActions.login('durjoyks261@gmail.com', 'wrongpassword');
+        await LoginActions.login(loginData.wrongPassword.email, loginData.wrongPassword.password);
         await browser.pause(2000);
         const currentUrl = await browser.getUrl();
         assert.ok(currentUrl.includes('/account/login'), 'User should remain on login page');
@@ -37,7 +39,7 @@ describe('Evershop Login Flow', () => {
     });
 
     it('Login with invalid email format', async () => {
-        await LoginActions.login('invalidemail', 'somepassword');
+        await LoginActions.login(loginData.invalidFormat.email, loginData.invalidFormat.password);
         await browser.pause(2000);
         const currentUrl = await browser.getUrl();
         assert.ok(currentUrl.includes('/account/login'), 'User should remain on login page');
