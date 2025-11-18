@@ -32,7 +32,7 @@ describe("Checkout Process", () => {
 
 
     it("Select payment method and Place Order", async () => {
-
+        
         await CheckoutActions.PaymentandConfirmOrder();
 
     });
